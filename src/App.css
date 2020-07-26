@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600;700&display=swap");
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Advent Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+  color: black;
+  outline: none;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#header #topnav {
+  background-color: #222627;
+}
+
+#header #topnav h1 {
+  display: block;
+  margin: auto;
+  font-weight: 800;
+  font-family: "EB Garamond", serif;
+  color: white;
+}
+
+#header #topnav h1 span {
+  font-size: 0.5em;
+  color: #de2f63;
+  font-weight: 600;
+  font-family: "EB Garamond", serif;
+}
+
+#header #menu {
+  padding: 10px;
+  display: block;
+  margin: auto;
+  background-color: #fff;
+}
+
+#header #menu ul {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: (100px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 100px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+#header #menu ul li {
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+#header #menu ul li:hover {
+  -webkit-box-shadow: 0px 1.5px 0px #b42b42;
+          box-shadow: 0px 1.5px 0px #b42b42;
+}
+
+#header #menu ul .active {
+  -webkit-box-shadow: 0px 1.5px 0px #b42b42;
+          box-shadow: 0px 1.5px 0px #b42b42;
+}
+
+#header #menu ul span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#header #menu ul span svg {
+  float: right;
+}
+
+#search-bar {
+  width: 90%;
+  position: fixed;
+  left: 5%;
+  z-index: 11;
+  background-color: #3f4346;
+  padding: 20px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  border-radius: 10px;
+}
+
+#search-bar h1 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#search-bar .cross {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 1.4em;
+  color: #bc98a0;
+  cursor: pointer;
+}
+
+#search-bar #search-form {
+  color: white;
+}
+
+#search-bar #search-form .form-group {
+  margin-top: 50px;
+}
+
+#search-bar #search-form .form-group input {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border-bottom: 1.5px solid #d6d6d6;
+  border-radius: 0px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#search-bar #search-form .form-group button {
+  display: block;
+  margin: auto;
+  font-size: 2em;
+  color: #99a0b9;
+  background-color: transparent;
+  outline: none !important;
+  border: none !important;
+}
+
+footer {
+  background-color: #1b1c1d;
+  padding: 30px 0px;
+}
+
+footer .form-group input {
+  background-color: transparent !important;
+}
+
+footer .form-group button {
+  color: white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: transparent !important;
+}
+
+footer .form-group button:hover {
+  color: pink;
+}
+
+footer .social-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30px, 40px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30px, 40px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  -ms-grid-rows: 40px;
+      grid-template-rows: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social-cont svg {
+  display: block;
+  margin: auto;
+}
+
+footer h4 {
+  color: white !important;
+}
+
+footer .links-cont {
+  border-bottom: 1px white solid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer .links-cont .list-group-item {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+footer .links-cont .col-md-4 .col-lg-4 {
+  background-color: grey !important;
+}
+
+.main-section {
+  padding-top: 150px;
+}
+
+.news-card-2 {
+  overflow: hidden;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  font-family: "Advent Pro", sans-serif !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(100px, 1fr) minmax(100px, 4fr);
+      grid-template-columns: minmax(100px, 1fr) minmax(100px, 4fr);
+}
+
+.news-card-2 .news-tag {
+  position: relative;
+  top: 30px;
+  left: 5px;
+  font-family: "Advent Pro", sans-serif !important;
+  color: pink;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background-color: #ad1c40;
+}
+
+.news-card-2 .img-cont {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news-card-2 .img-cont img {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 5px;
+}
+
+.news-card-2 .text-content {
+  padding-left: 5%;
+}
+
+.news-card-2 .text-content h5 {
+  padding: 10px;
+  font-family: "Advent Pro", sans-serif !important;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #34373a;
+}
+
+.news-card-2 .text-content .source {
+  font-weight: bold;
+  color: #273ea3;
+  padding: 0px 10px 5px 10px;
+}
+
+.news-card-2 .text-content p {
+  padding: 0px 10px;
+  font-weight: 500;
+}
+
+#searched-cont {
+  padding-top: 150px;
+  cursor: pointer;
+}
+
+#searched-cont .row h1 {
+  width: 100%;
+}
+
+#searched-cont .row h1 .backbtn {
+  float: right;
+  font-size: 0.5em;
+  font-weight: 800;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#searched-cont .row h1 .backbtn:hover {
+  color: #330e3a;
+  letter-spacing: 2px;
+}
+
+#searched-cont .row h1 .backbtn:hover svg {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+#searched-cont .searched-new-cont li {
+  padding-bottom: 50px !important;
+}
+
+#searched-cont .pagination {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (30px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 30px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 2rem;
+  font-weight: bold;
+  border-top: 1px solid grey;
+  margin-top: 20px;
+  padding: 30px 0px;
+}
+
+#searched-cont .pagination .page-item {
+  border-radius: 5px;
+}
+
+#searched-cont .pagination .page-item .page-link {
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+#searched-cont .pagination .page-item .page-link:active, #searched-cont .pagination .page-item .page-link:focus {
+  background-color: #e20662;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+}
+
+#searched-cont .pagination .active {
+  background-color: #e20662;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+}
+
+.card-news:hover .source {
+  color: #09938c !important;
+  letter-spacing: 1px;
+  font-weight: 800;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.card-news:hover h5 {
+  color: #d12961 !important;
+}
+
+.card-news .text-content .source {
+  font-family: "Advent Pro", sans-serif !important;
+  font-size: 1em !important;
+}
+
+.card-news .text-content .source:hover {
+  color: #c03462;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.card-news .text-content h5 {
+  font-family: "Advent Pro", sans-serif !important;
+}
+
+#topbanner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+}
+
+.news-card-1 {
+  overflow: hidden;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  font-family: "Advent Pro", sans-serif !important;
+}
+
+.news-card-1 .news-tag {
+  position: relative;
+  top: 30px;
+  left: 5px;
+  font-family: "Advent Pro", sans-serif !important;
+  color: pink;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background-color: #ad1c40;
+}
+
+.news-card-1 img {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 5px;
+}
+
+.news-card-1 .underline {
+  display: block;
+  margin: auto;
+  height: 0.5px;
+  width: 60%;
+  background-color: #000000;
+}
+
+.news-card-1 h5 {
+  padding: 10px;
+  font-family: "Advent Pro", sans-serif !important;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.news-card-1 .source {
+  font-weight: 500;
+  color: #273ea3;
+  padding: 20px 10px 5px 10px;
+}
+
+.news-card-1:hover {
+  color: #d12961 !important;
+}
+
+.news-card-1:hover h5 {
+  color: #d12961 !important;
+  font-weight: bold;
+}
+
+.news-card-1:hover .source {
+  color: #00ffd5 !important;
+  font-weight: bold;
+}
+
+.underline {
+  display: block;
+  margin: auto;
+  height: 0.5px;
+  width: 60%;
+  background-color: #000000;
+}
+
+#middle-section {
+  margin-top: 40px;
+}
+
+#middle-section .middle-row {
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#middle-section .news-cont-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 2fr;
+      grid-template-rows: 1fr 1fr 2fr;
+  grid-gap: 2em;
+}
+
+#middle-section .news-cont-2 a:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+}
+
+#middle-section .news-cont-2 a:nth-child(1) img {
+  max-height: 450px;
+}
+
+#middle-section .side-filters .filters {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  font-family: "Advent Pro", sans-serif;
+}
+
+#middle-section .side-filters .filters .active {
+  background-color: pink;
+  color: #c32c46;
+}
+
+#middle-section .side-filters .filters .filter {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: "Advent Pro", sans-serif;
+  border-radius: 5px;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+#middle-section .side-filters .filtered-news li {
+  font-family: "Advent Pro", sans-serif !important;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#middle-section .side-filters .filtered-news li:hover {
+  color: #d12961 !important;
+}
+
+#middle-section .side-filters .filtered-news li:hover h5 {
+  color: #d12961 !important;
+  font-weight: bold;
+}
+
+#middle-section .side-filters .filtered-news li:hover p {
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+#topic-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#topic-section .topic .heading-topic {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px 90px 0px;
+}
+
+#topic-section .topic .heading-topic span {
+  text-align: center;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  z-index: 9;
+  font-size: 3em;
+  background-color: #fff !important;
+  padding: 10px;
+}
+
+#topic-section .topic .read-more {
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #981a2f;
+  margin: 20px auto 30px auto;
+  cursor: pointer;
+}
+
+#topic-section .topic .read-more:hover .icon {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-left: 10px;
+}
+
+#topic-section .topic .topic-news {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 3rem;
+}
+
+.search-mini {
+  display: none;
+  float: right;
+}
+
+@media screen and (max-width: 800px) {
+  #topnav {
+    padding: 0 !important;
+  }
+  #topnav h1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5em;
+  }
+  .search-mini {
+    display: inline-block;
+    height: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px 10px 0px 0px;
+    font-size: 1.5em;
+  }
+  #menu {
+    display: none !important;
+  }
+  .main-section {
+    padding-top: 40px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
